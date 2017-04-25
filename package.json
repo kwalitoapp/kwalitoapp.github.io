@@ -1,0 +1,37 @@
+{
+  "name": "freelancer",
+  "title": "Freelancer",
+  "version": "3.3.7+1",
+  "homepage": "http://startbootstrap.com/template-overviews/freelancer",
+  "author": "Start Bootstrap",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.11.3",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "livereload": "^0.6.2",
+    "npm-run-all": "^4.0.2",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+  },
+  "scripts": {
+    "webpack": "webpack --colors",
+    "webpack:watch": "npm run webpack -- --watch",
+    "livereload": "livereload",
+    "dev": "npm-run-all --parallel webpack:watch livereload"
+  }
+}
