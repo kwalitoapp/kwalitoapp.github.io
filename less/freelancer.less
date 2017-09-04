@@ -11,7 +11,7 @@ p {
   font-size: 20px;
 }
 
-p.small {
+p.small, ul {
   font-size: 16px;
 }
 
@@ -155,11 +155,11 @@ header {
 	li {
 	  a {
 		color: white;
-        border-radius: @btn-border-radius-base;
+		border-radius: @btn-border-radius-base;
 		&:hover,
 		&:focus,
 		&:active {
-          color: white;
+		  color: white;
 		}
 	  }
 	  &.active {
@@ -169,8 +169,8 @@ header {
 		  &:hover,
 		  &:focus,
 		  &:active {
-            color: @brand-success;
-            background: white;
+			color: @brand-success;
+			background: white;
 		  }
 		}
 	  }
@@ -341,8 +341,20 @@ section.success {
   }
 }
 
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid @gray-lighter;
+form {
+  .row {
+	&:first-child .floating-label-form-group {
+	  border-top: 1px solid @gray-lighter;
+	}
+    .floating-label-form-group {
+      border-radius: 6px;
+      background-color: white;
+    }
+  }
+}
+
+.google-trends iframe {
+  min-height: 366px;
 }
 
 footer {
@@ -505,4 +517,63 @@ footer {
 
 div#maincontent{
   outline: none;
+}
+
+.carousel {
+  .item {
+	img {
+	  height: 400px;
+	  margin: auto;
+	}
+  }
+  .carousel-control {
+	.fa {
+	  margin-top: 140px;
+	  font-size: 40px;
+	  color: @brand-success;
+	}
+	&.right {
+	  background-image: linear-gradient(to right, fadeout(white, 100%) 0%, fadeout(white, 0%) 100%);
+	}
+	&.left {
+	  background-image: linear-gradient(to right, fadeout(white, 0%) 0%, fadeout(white, 100%) 100%);
+	}
+  }
+  .carousel-indicators {
+	li {
+	  border-color: @brand-success;
+	  &.active {
+		background-color: @brand-success;
+	  }
+	}
+  }
+}
+
+.success .carousel {
+  .carousel-control {
+	&.right {
+	  background-image: linear-gradient(to right, fadeout(@brand-info, 100%) 0%, fadeout(@brand-info, 0%) 100%);
+	}
+	&.left {
+	  background-image: linear-gradient(to right, fadeout(@brand-info, 0%) 0%, fadeout(@brand-info, 100%) 100%);
+	}
+  }
+}
+
+#carousel-temoignages {
+  height: 480px;
+}
+
+#carousel-presse {
+  height: 320px;
+}
+
+footer {
+  a,
+  a:hover,
+  a:focus,
+  a:active,
+  a.active {
+	color: white;
+  }
 }
